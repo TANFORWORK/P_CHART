@@ -1,0 +1,135 @@
+.swal2-container {
+    z-index: 9999;
+}
+
+/* SweetAlert2 Theme Integration */
+.swal2-popup {
+    background: var(--color-base-100) !important;
+    color: var(--color-base-content) !important;
+    border: 1px solid var(--color-base-300) !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.swal2-title {
+    color: var(--color-base-content) !important;
+    font-weight: 600 !important;
+}
+
+.swal2-content {
+    color: var(--color-base-content) !important;
+    opacity: 0.8;
+}
+
+.swal2-confirm {
+    background-color: var(--color-success) !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    font-weight: 500 !important;
+    padding: 0.75rem 1.5rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.swal2-confirm:hover {
+    background-color: var(--color-success) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.swal2-cancel {
+    background-color: var(--color-error) !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    font-weight: 500 !important;
+    padding: 0.75rem 1.5rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.swal2-cancel:hover {
+    background-color: var(--color-error) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.swal2-icon {
+    border: none !important;
+}
+
+.swal2-icon.swal2-success {
+    color: var(--color-success) !important;
+}
+
+.swal2-icon.swal2-error {
+    color: var(--color-error) !important;
+}
+
+.swal2-icon.swal2-warning {
+    color: var(--color-warning) !important;
+}
+
+.swal2-icon.swal2-info {
+    color: var(--color-info) !important;
+}
+
+.swal2-icon.swal2-question {
+    color: var(--color-primary) !important;
+}
+
+/* Custom animations */
+.swal2-show {
+    animation: swal2-show 0.3s ease-out !important;
+}
+
+.swal2-hide {
+    animation: swal2-hide 0.2s ease-in !important;
+}
+
+@keyframes swal2-show {
+    0% {
+        transform: scale(0.7) translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes swal2-hide {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.9) translateY(-10px);
+        opacity: 0;
+    }
+}
+
+/* Background overlay */
+.swal2-backdrop-show {
+    background: rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(4px) !important;
+}
+
+/* Input fields in SweetAlert2 */
+.swal2-input {
+    background: var(--color-base-200) !important;
+    color: var(--color-base-content) !important;
+    border: 1px solid var(--color-base-300) !important;
+    border-radius: 0.5rem !important;
+    padding: 0.75rem !important;
+}
+
+.swal2-input:focus {
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 3px rgba(var(--color-primary), 0.1) !important;
+    outline: none !important;
+}
+
+/* Progress bar for timed alerts */
+.swal2-timer-progress-bar {
+    background: var(--color-primary) !important;
+}

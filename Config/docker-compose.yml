@@ -1,0 +1,29 @@
+# docker compose up -d --build
+# docker compose kill
+# docker compose create
+
+version: "3"
+
+services:
+  nginx:
+    image: nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    container_name: nginx-reverse-proxy-webapp-5.0
+
+  SMART-PCHART-AVI:
+    image: nginx
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Bangkok
+      - PGTZ=Asia/Bangkok
+    # ports:
+    #   - "8081:80"
+    volumes:
+      - ./SMART-PCHART-AVI/default.conf:/etc/nginx/conf.d/default.conf
+      - ./SMART-PCHART-AVI/dist:/projects
+    container_name: SMART-PCHART-AVI-container
+  # SMART-LINK
